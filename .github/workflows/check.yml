@@ -28,5 +28,7 @@ jobs:
           python-version: "3.9"
       - name: Run python script
         run: |
-          pip install requests beautifulsoup4 lxml dryscrape
+          apt-get install qt5-default libqt5webkit5-dev build-essential python-lxml python-pip xvfb
+          pip install dryscrape
+          pip install requests beautifulsoup4 lxml
           python check_price_and_notify.py
